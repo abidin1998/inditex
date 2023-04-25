@@ -25,7 +25,7 @@ public class Controller {
                                                                @PathVariable Integer brandId){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH.mm.ss");
 
-        LocalDateTime tranformedDate = LocalDateTime.parse(date,formatter);
-        return new ResponseEntity<>(inditexService.getData(tranformedDate,productId,brandId), HttpStatus.OK);
+        LocalDateTime transformedDate = LocalDateTime.parse(date,formatter);
+        return new ResponseEntity<>(inditexService.getData(transformedDate,productId,brandId), HttpStatus.OK);
     }
 }
